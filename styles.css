@@ -1,0 +1,107 @@
+
+/* CSS Variables */
+:root {
+    --color-primary: #cdb4db;
+    --color-secondary: #ffc8dd;
+    --color-accent: #ffafcc;
+    --color-headings: #bde0fe;
+    --color-body: #a2d2ff;
+    --heading-font-size: 3em;
+}
+
+h1 {
+    color: var(--color-headings);
+    font-size: var(--heading-font-size);
+}
+
+#widget-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1024px) {
+    #widget-grid {
+        /* revert to single column on screens < 1024px wide  */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Links */
+#link-div {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem; /* rem = relative to root element */
+    font-weight: bold;
+}
+
+.link-arrow::after {
+    content: "\2197";
+    margin-left: 5px;
+    transition: margin 0.15s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+/* Badges */
+.badge {
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+}
+
+.badge--primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.badge--secondary {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
+}
+
+/* apply rules to screens less than 1024px wide */
+@media screen and (max-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}
+
+/* Lists */
+.list {
+    list-style: none;
+    padding-left: 0;
+    color: var(--color-headings);
+}
+
+.list-tick {
+    list-style-image: url(./images/tick.svg);
+    padding-left: 1rem;
+}
+
+.checked-list {
+    margin-left: 1rem;
+}
+
+.list-horizontal {
+    display: flex;
+    gap: 1.5rem;
+}
+ 
