@@ -49,6 +49,7 @@
 13. `git fetch`
     Downloads changes from the remote, but doesn't merge them automatically.
 
+fish
 
 ### **`.gitignore`**
     Use this file to specify files that should not be tracked/
